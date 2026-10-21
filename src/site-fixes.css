@@ -1,0 +1,575 @@
+@import url("./rtr-site.css");
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #c9ec38;
+  outline-offset: 4px;
+}
+
+a[aria-disabled="true"] {
+  cursor: default;
+}
+
+.local-form-status {
+  margin-top: 1rem;
+  color: currentColor;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.w-webflow-badge,
+a[href*="webflow.com"] {
+  display: none !important;
+}
+
+[data-rtr-home] .footer-brand-link img {
+  width: 8.5rem;
+  height: auto;
+  object-fit: contain;
+}
+
+[data-rtr-home] .footer-bg-blur {
+  z-index: 1;
+  background: rgb(5 31 17 / 68%);
+  -webkit-backdrop-filter: blur(2px) saturate(92%);
+  backdrop-filter: blur(2px) saturate(92%);
+}
+
+[data-rtr-home] footer.footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #082515;
+}
+
+[data-rtr-home] footer.footer > .rtr-footer-backdrop {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0 !important;
+}
+
+[data-rtr-home] footer.footer > .rtr-footer-backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+[data-rtr-home] footer.footer .layout-footer > :not(.image-wrap) {
+  position: relative;
+  z-index: 2;
+}
+
+[data-rtr-home] .layout-footer {
+  position: relative;
+  z-index: 2 !important;
+}
+
+[data-rtr-home] .brand-link img {
+  width: auto;
+  height: 2.25rem;
+  object-fit: contain;
+}
+
+[data-rtr-home] .navbar-wrap {
+  --nav-glass-top: 80%;
+  --nav-glass-bottom: 5%;
+  --mobile-menu-surface: rgb(9 31 20 / 94%);
+  isolation: isolate;
+}
+
+[data-rtr-home] .navbar-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 -3rem;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(8 24 17 / 20%),
+    rgb(8 24 17 / 7%) 62%,
+    transparent
+  );
+  -webkit-backdrop-filter: blur(18px) saturate(118%);
+  backdrop-filter: blur(18px) saturate(118%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / var(--nav-glass-top)),
+    rgb(0 0 0 / 45%) 56%,
+    rgb(0 0 0 / var(--nav-glass-bottom))
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / var(--nav-glass-top)),
+    rgb(0 0 0 / 45%) 56%,
+    rgb(0 0 0 / var(--nav-glass-bottom))
+  );
+}
+
+[data-rtr-home] .navbar {
+  position: relative;
+  z-index: 1;
+}
+
+[data-rtr-home] .rtr-home-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 2.5vw, 3rem);
+}
+
+[data-rtr-home] .rtr-home-nav-links a {
+  color: inherit;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+[data-rtr-home] .rtr-home-nav-links a:not(.rtr-home-nav-cta),
+[data-rtr-home] .dates {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+[data-rtr-home] .rtr-home-nav-cta {
+  padding: 0.75rem 1.15rem;
+  border-radius: 999px;
+  background: #caee38;
+  color: #102f1b !important;
+}
+
+[data-rtr-home] .section-hero .image-wrap img,
+[data-rtr-home] .levels-card img,
+[data-rtr-home] .team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-rtr-home] .section-hero .image-wrap img {
+  object-position: center 54%;
+}
+
+[data-rtr-home] .section-hero .rtr-hero-visuals {
+  isolation: isolate;
+}
+
+[data-rtr-home] .section-hero .rtr-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  object-position: var(--rtr-hero-object-position, center center);
+  animation-name: rtr-hero-crossfade;
+  animation-duration: 60s;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  animation-delay: calc((var(--rtr-hero-slide-index) * 12s) - 2.4s);
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes rtr-hero-crossfade {
+  0% { opacity: 0; }
+  4%, 20% { opacity: 1; }
+  24%, 100% { opacity: 0; }
+}
+
+[data-rtr-home] .rtr-hero-overline {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  line-height: 1;
+}
+
+[data-rtr-home] .rtr-hero-proof {
+  display: flex;
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+[data-rtr-home] .rtr-hero-proof > div:first-child {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+[data-rtr-home] .rtr-hero-proof > div:last-child {
+  max-width: 15rem;
+  color: rgb(255 255 255 / 92%);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+[data-rtr-home] .slide.is-team .badge {
+  border: 1px solid rgb(255 255 255 / 56%);
+  background: rgb(255 255 255 / 84%);
+  box-shadow: 0 0.45rem 1.25rem rgb(7 31 19 / 12%);
+  color: #102f1b;
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+  backdrop-filter: blur(12px) saturate(112%);
+}
+
+[data-rtr-home] .slide.is-instructors .badge {
+  border: 1px solid rgb(255 255 255 / 56%);
+  background: rgb(255 255 255 / 84%);
+  box-shadow: 0 0.45rem 1.25rem rgb(7 31 19 / 12%);
+  color: #102f1b;
+  -webkit-backdrop-filter: blur(12px) saturate(112%);
+  backdrop-filter: blur(12px) saturate(112%);
+}
+
+[data-rtr-home] .slider.is-instructors .w-slider-mask,
+[data-rtr-home] .slide.is-instructors,
+[data-rtr-home] .slide.is-instructors .image-wrap {
+  overflow: hidden;
+  border-radius: inherit;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+[data-rtr-home] .slide.is-instructors {
+  isolation: isolate;
+}
+
+[data-rtr-parallax] {
+  will-change: transform;
+  transform-origin: center;
+}
+
+.rtr-parallax-clip {
+  overflow: hidden;
+}
+
+.rtr-footer-link {
+  position: relative;
+  display: flex !important;
+  min-height: 2.85rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+}
+
+.rtr-footer-link-line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  overflow: hidden;
+  background: rgb(255 255 255 / 22%);
+}
+
+.rtr-footer-link-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #c9ec38;
+  transform: translateX(-101%);
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rtr-footer-link:hover .rtr-footer-link-line::after {
+  transform: translateX(0);
+}
+
+.rtr-footer-word {
+  display: flex;
+  justify-content: center;
+}
+
+.rtr-footer-letter {
+  display: inline-block;
+  color: rgb(255 255 255 / 30%);
+  transition: color 360ms ease;
+}
+
+.rtr-footer-letter.is-active {
+  color: #cee253;
+}
+
+.rtr-footer-letter.is-trailing {
+  color: rgb(206 226 83 / 58%);
+}
+
+[data-rtr-home] .slider.is-overview .slide {
+  isolation: isolate;
+}
+
+[data-rtr-home] .slider.is-overview .slide-content {
+  z-index: 2;
+}
+
+[data-rtr-home] .rtr-highlight-readability {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 58%;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgb(4 18 12 / 24%) 38%, rgb(4 18 12 / 72%));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 18%) 30%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgb(0 0 0 / 18%) 30%, #000 100%);
+}
+
+[data-rtr-home] .rtr-destination-card {
+  min-height: 25rem;
+  padding: 0.75rem !important;
+  overflow: hidden;
+  border: 1px solid rgb(16 47 27 / 7%);
+  border-radius: 1.75rem;
+  background: #fff;
+  box-shadow: 0 1.25rem 3rem rgb(16 47 27 / 7%);
+}
+
+[data-rtr-home] .rtr-destination-card__link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+[data-rtr-home] .rtr-destination-card__image {
+  height: 14.5rem;
+  min-height: 14.5rem;
+  flex: 0 0 14.5rem;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  background: #dce4dc;
+}
+
+[data-rtr-home] .rtr-destination-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-rtr-home] .rtr-destination-card__link:hover .rtr-destination-card__image img {
+  transform: scale(1.035);
+}
+
+[data-rtr-home] .rtr-destination-card__body {
+  padding: 1.25rem 0.45rem 0.55rem;
+}
+
+[data-rtr-home] .rtr-destination-card__eyebrow {
+  margin-bottom: 0.65rem;
+  color: #7b837d;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+[data-rtr-home] .rtr-destination-card__body h3 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.05;
+}
+
+[data-rtr-home] .rtr-destination-card__body p {
+  display: -webkit-box;
+  margin: 0.65rem 0 0;
+  overflow: hidden;
+  color: #737a75;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+[data-rtr-home] .big-letters {
+  justify-content: center;
+}
+
+[data-rtr-home] .big-letter {
+  font-size: clamp(4rem, 11vw, 12rem);
+}
+
+@media (max-width: 991px) {
+  [data-rtr-home] .navbar-menu-wrap {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 1;
+    width: 100vw;
+    min-height: 100dvh;
+    overflow-y: auto;
+    background: var(--mobile-menu-surface);
+    -webkit-backdrop-filter: blur(22px) saturate(112%);
+    backdrop-filter: blur(22px) saturate(112%);
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 24%);
+  }
+
+  [data-rtr-home] .navbar-brand-wrap,
+  [data-rtr-home] .burger-button {
+    position: relative;
+    z-index: 2;
+  }
+
+  [data-rtr-home] .rtr-home-nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 7rem 1.5rem 2rem;
+    gap: 1.25rem;
+  }
+
+  [data-rtr-home] .rtr-home-nav-links a {
+    font-size: 1.5rem;
+  }
+
+  [data-rtr-home] .rtr-home-nav-links a:not(.rtr-home-nav-cta) {
+    color: #fff;
+    mix-blend-mode: normal;
+  }
+
+  [data-rtr-home] .burger-line {
+    background-color: #fff;
+  }
+
+  [data-rtr-home] .rtr-home-nav-cta {
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  [data-rtr-home] .brand-link img {
+    width: auto;
+    height: 2rem;
+  }
+
+  [data-rtr-home] .dates {
+    max-width: 9rem;
+    font-size: 0.7rem;
+  }
+
+  [data-rtr-home] .section-hero .image-wrap img {
+    object-position: 58% center;
+  }
+
+  [data-rtr-home] .section-hero .rtr-hero-slide {
+    object-position: var(--rtr-hero-object-position, center center);
+  }
+
+  [data-rtr-home] .rtr-hero-overline {
+    padding: 0;
+    font-size: 0.64rem;
+  }
+
+  [data-rtr-home] .rtr-hero-proof {
+    gap: 0.7rem;
+    padding: 0;
+  }
+
+  [data-rtr-home] .rtr-hero-proof > div:last-child {
+    max-width: 12rem;
+    font-size: 0.82rem;
+  }
+
+  [data-rtr-home] .rtr-destination-card {
+    min-height: 29rem;
+    padding: 0.85rem !important;
+  }
+
+  [data-rtr-home] .rtr-destination-card__image {
+    height: 19rem;
+    min-height: 19rem;
+    flex: 0 0 19rem;
+  }
+}
+
+.webflow-runtime-fallback
+  :is(
+    .heading-h2,
+    .star-icon,
+    .heading-h1,
+    .navbar,
+    .slider-wrap,
+    .overview-story-card,
+    .overview-detail,
+    .levels-card,
+    .secondary-button,
+    .room-accordion-wrap,
+    .layout-centered.is-cta,
+    .experience-card,
+    .steps-number,
+    .pricing-cards-wrap,
+    .cta-emoji-wrap
+  ) {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  [data-rtr-parallax] {
+    transform: none !important;
+  }
+
+  [data-rtr-home] .section-hero .rtr-hero-slide {
+    opacity: 0 !important;
+    animation: none !important;
+  }
+
+  [data-rtr-home] .section-hero .rtr-hero-slide:first-child {
+    opacity: 1 !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-delay: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  :is(
+    .heading-h2,
+    .star-icon,
+    .heading-h1,
+    .navbar,
+    .slider-wrap,
+    .overview-story-card,
+    .overview-detail,
+    .levels-card,
+    .secondary-button,
+    .room-accordion-wrap,
+    .layout-centered.is-cta,
+    .experience-card,
+    .steps-number,
+    .pricing-cards-wrap,
+    .cta-emoji-wrap
+  ) {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
