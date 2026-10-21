@@ -1,3 +1,4 @@
+import { BASE } from "./base.js";
 export const routePaths = [
   "/",
   "/destinations",
@@ -21,8 +22,8 @@ export const siteMeta = {
   years: "4+",
   destinationCount: "9",
   travellerCount: "200+",
-  logoLight: "/images/rtr-logo-white.png",
-  logoDark: "/images/rtr-logo-black.png",
+  logoLight: BASE + "images/rtr-logo-white.png",
+  logoDark: BASE + "images/rtr-logo-black.png",
 };
 
 export const destinations = [
@@ -33,7 +34,7 @@ export const destinations = [
     summary:
       "Move from Bangkok's street life to island water, temple towns and unhurried beach days.",
     price: "From ₹23,000",
-    image: "/images/rtr-destinations/thailand.png",
+    image: BASE + "images/rtr-destinations/thailand.png",
   },
   {
     slug: "singapore",
@@ -42,7 +43,7 @@ export const destinations = [
     summary:
       "Gardens, neighbourhoods, hawker tables and modern landmarks in one compact escape.",
     price: "From ₹33,000",
-    image: "/images/rtr-destinations/singapore.png",
+    image: BASE + "images/rtr-destinations/singapore.png",
   },
   {
     slug: "malaysia",
@@ -51,7 +52,7 @@ export const destinations = [
     summary:
       "Pair Kuala Lumpur with Penang heritage, rainforest calm or an island finish.",
     price: "From ₹22,000",
-    image: "/images/rtr-destinations/malaysia.png",
+    image: BASE + "images/rtr-destinations/malaysia.png",
   },
   {
     slug: "maldives",
@@ -60,7 +61,7 @@ export const destinations = [
     summary:
       "A restorative island trip shaped around snorkelling, slow mornings and open water.",
     price: "From ₹47,000",
-    image: "/images/rtr-destinations/maldives.png",
+    image: BASE + "images/rtr-destinations/maldives.png",
   },
   {
     slug: "bali",
@@ -69,7 +70,7 @@ export const destinations = [
     summary:
       "Blend Ubud's green interior, temple culture, family adventures and time by the sea.",
     price: "From ₹30,000",
-    image: "/images/rtr-destinations/bali.png",
+    image: BASE + "images/rtr-destinations/bali.png",
   },
   {
     slug: "sri-lanka",
@@ -78,7 +79,7 @@ export const destinations = [
     summary:
       "Travel from tea country and wildlife to heritage towns and palm-fringed coastlines.",
     price: "From ₹26,000",
-    image: "/images/rtr-destinations/sri-lanka.png",
+    image: BASE + "images/rtr-destinations/sri-lanka.png",
   },
   {
     slug: "nepal",
@@ -87,7 +88,7 @@ export const destinations = [
     summary:
       "Build a journey around Himalayan trails, living heritage and generous local hospitality.",
     price: "From ₹30,000",
-    image: "/images/rtr-destinations/nepal.png",
+    image: BASE + "images/rtr-destinations/nepal.png",
   },
   {
     slug: "dubai",
@@ -96,7 +97,7 @@ export const destinations = [
     summary:
       "Move between creek-side heritage, desert stillness and the city's bold architecture.",
     price: "From ₹32,000",
-    image: "/images/rtr-destinations/dubai.png",
+    image: BASE + "images/rtr-destinations/dubai.png",
   },
   {
     slug: "cambodia",
@@ -105,7 +106,7 @@ export const destinations = [
     summary:
       "Explore Angkor's temples, contemporary culture and slower journeys beyond the familiar route.",
     price: "From ₹28,000",
-    image: "/images/rtr-destinations/cambodia.png",
+    image: BASE + "images/rtr-destinations/cambodia.png",
   },
 ];
 
@@ -114,37 +115,37 @@ export const experiences = [
     title: "Island Paradise",
     location: "Maldives",
     summary: "Lagoon mornings, snorkelling, sunset cruises and space to properly slow down.",
-    image: "/images/rtr-destinations/maldives.png",
+    image: BASE + "images/rtr-destinations/maldives.png",
   },
   {
     title: "Temple & Culture Trail",
     location: "Thailand",
     summary: "Food, neighbourhoods and living traditions from Bangkok to the north.",
-    image: "/images/rtr-destinations/thailand.png",
+    image: BASE + "images/rtr-destinations/thailand.png",
   },
   {
     title: "Island of Gods",
     location: "Bali",
     summary: "Rice terraces, ceremonies, family discoveries and a softer pace.",
-    image: "/images/rtr-destinations/bali.png",
+    image: BASE + "images/rtr-destinations/bali.png",
   },
   {
     title: "Himalayan Trekking",
     location: "Nepal",
     summary: "Mountain trails adapted to your pace, with villages and heritage along the way.",
-    image: "/images/rtr-destinations/nepal.png",
+    image: BASE + "images/rtr-destinations/nepal.png",
   },
   {
     title: "Desert & Skyline",
     location: "Dubai",
     summary: "Creek history, desert evenings and the contemporary city in one route.",
-    image: "/images/rtr-destinations/dubai.png",
+    image: BASE + "images/rtr-destinations/dubai.png",
   },
   {
     title: "Modern City Escape",
     location: "Singapore",
     summary: "Green architecture, neighbourhood food and easy urban discovery.",
-    image: "/images/rtr-destinations/singapore.png",
+    image: BASE + "images/rtr-destinations/singapore.png",
   },
 ];
 
@@ -185,17 +186,17 @@ export const team = [
   {
     name: "Vinayak Lal",
     role: "Founder",
-    image: "/images/rtr-team/vinayak.jpeg",
+    image: BASE + "images/rtr-team/vinayak.jpeg",
   },
   {
     name: "Ajisha Rajan",
     role: "Co-founder",
-    image: "/images/rtr-team/ajisha.jpeg",
+    image: BASE + "images/rtr-team/ajisha.jpeg",
   },
   {
     name: "Sanjita Krishnan",
     role: "Operations Manager",
-    image: "/images/rtr-team/sanjita.jpeg",
+    image: BASE + "images/rtr-team/sanjita.jpeg",
   },
 ];
 

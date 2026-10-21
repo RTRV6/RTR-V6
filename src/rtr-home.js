@@ -1,3 +1,4 @@
+import { BASE } from "./base.js";
 import {
   destinations,
   experiences,
@@ -103,25 +104,25 @@ export const homepageContent = {
   },
   highlights: [
     {
-      image: "/images/rtr-highlights/indian-couple-thailand.png",
+      image: BASE + "images/rtr-highlights/indian-couple-thailand.png",
       alt: "An Indian couple walking together near a waterfall in Thailand",
       title: "Find the places between the postcards",
       copy: "Forest paths, waterfalls and a day that unfolds at your pace",
     },
     {
-      image: "/images/rtr-highlights/indian-women-singapore.png",
+      image: BASE + "images/rtr-highlights/indian-women-singapore.png",
       alt: "Two Indian women friends sharing street food in Singapore",
       title: "Taste the city as it really is",
       copy: "Local tables, lively neighbourhoods and easy conversations",
     },
     {
-      image: "/images/rtr-highlights/indian-men-sri-lanka.png",
+      image: BASE + "images/rtr-highlights/indian-men-sri-lanka.png",
       alt: "Three Indian men friends overlooking the coast in Sri Lanka",
       title: "Leave room for the unplanned",
       copy: "Coastal roads, slow afternoons and stories found along the way",
     },
     {
-      image: "/images/rtr-highlights/indian-family-bali.png",
+      image: BASE + "images/rtr-highlights/indian-family-bali.png",
       alt: "A multigenerational Indian family exploring a temple garden in Bali",
       title: "Make every generation part of it",
       copy: "Thoughtful pacing and meaningful moments for the whole family",
@@ -162,11 +163,11 @@ export const homepageContent = {
     ["Come home with a story", "A smooth departure and support through the final leg of the journey."],
   ],
   planners: [
-    { name: "Airport welcome", role: "Thailand", image: "/images/rtr-planners/thailand-airport-driver.png" },
-    { name: "Temple stories", role: "Malaysia", image: "/images/rtr-planners/malaysia-temple-guide.png" },
-    { name: "Family-first guiding", role: "Malaysia", image: "/images/rtr-planners/malaysia-family-guide.png" },
+    { name: "Airport welcome", role: "Thailand", image: BASE + "images/rtr-planners/thailand-airport-driver.png" },
+    { name: "Temple stories", role: "Malaysia", image: BASE + "images/rtr-planners/malaysia-temple-guide.png" },
+    { name: "Family-first guiding", role: "Malaysia", image: BASE + "images/rtr-planners/malaysia-family-guide.png" },
   ],
-  videoThumbnail: "/images/rtr-highlights/indian-women-singapore.png",
+  videoThumbnail: BASE + "images/rtr-highlights/indian-women-singapore.png",
   testimonialAutoplay: {
     delay: 4500,
     direction: "right-to-left",
